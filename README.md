@@ -2,7 +2,7 @@
 A Easy motion style window switcher.
 
 ### How it works
-To focus any visible window just launch easyxmotion (preferrably from a key binding) then it displays letters on each window, type that letter to jump to the window. 
+To focus any visible window just launch easyxmotion (preferably from a key binding) then it displays letters on each window, type that letter to jump to the window. 
 
 Should work with any window manager that supports [EWMH](http://en.wikipedia.org/wiki/Extended_Window_Manager_Hints). It probably only makes sense with tiling window managers. This fork is focused on compatibility with QTile.
 
