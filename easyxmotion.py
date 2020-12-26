@@ -77,7 +77,8 @@ def display_osd(options):
             osds.append(osd)
     return osds, windows
 
-def main(options):
+
+def jump_window(options):
     # current display
     pid_file = '/var/lock/easyxmotion.pid'
     # kill any old versions that are still running,
@@ -112,7 +113,8 @@ def main(options):
         disp.ungrab_keyboard(X.CurrentTime)
         sys.exit()
 
-if __name__ == '__main__':
+
+def main():
     import optparse
 
     parser = optparse.OptionParser(
@@ -142,4 +144,8 @@ If you're using a patched xosd, then you must use XFT font specs.""",
 
     (options, args) = parser.parse_args()
 
-    main(options)
+    jump_window(options)
+
+
+if __name__ == "__main__":
+    main()
