@@ -29,13 +29,20 @@ inspired by the vim plugin:
 https://github.com/Lokaltog/vim-easymotion
 
 """
-import time, string
-import wnck
+import os
+import sys
+import signal
+import time 
+import string
+import operator
 import pyosd
 from Xlib.display import Display
 from Xlib import X, XK
-import sys, os, signal
-import operator
+import gi
+
+gi.require_version('Wnck', '3.0')
+from gi.repository import Wnck as wnck
+
 
 # Config values
 # font = "-monotype-arial-bold-r-normal--75-0-0-0-p-0-iso8859-15" # looks prettier but isn't installed everywhere.
@@ -44,7 +51,7 @@ import operator
 timestamp = int(time.time())
 
 def display_osd(options):
-    s = wnck.screen_get_default()
+    s = wnck.Screen.get_default()
     s.force_update()
     windows = s.get_windows()
     osds = []
@@ -65,7 +72,8 @@ def display_osd(options):
             osd.set_horizontal_offset(x)
             osd.set_vertical_offset(y)
             # XXX explodes if more than 26 windows are visable.
-            osd.display(string.lowercase[i])
+            # The letters display uppercase (easier to read, imo), input is still lowercase
+            osd.display(string.ascii_uppercase[i])
             osds.append(osd)
     return osds, windows
 
@@ -99,8 +107,8 @@ def main(options):
     keycode = event.detail
     if event.type == X.KeyPress:
         key = XK.keysym_to_string(disp.keycode_to_keysym(keycode, 0))
-        if key and key in string.lowercase and string.lowercase.index(key) < len(windows):
-            windows[string.lowercase.index(key)].activate(timestamp)
+        if key and key in string.ascii_lowercase and string.ascii_lowercase.index(key) < len(windows):
+            windows[string.ascii_lowercase.index(key)].activate(timestamp)
         disp.ungrab_keyboard(X.CurrentTime)
         sys.exit()
 
