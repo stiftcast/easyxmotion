@@ -22,7 +22,7 @@ setup(
     install_requires=[
     # Un-official py3 port of pyosd, the original project and documentation are seemingly unavailable.
 	"pyosd @ git+https://github.com/dzen/pyosd@master#egg=pyosd",
-    "python-xlib"
+    	"python-xlib"
     ],
     python_requires=">=3.0",
     classifiers=[
