@@ -20,4 +20,3 @@ The `xorg-xlsfonts` package isn't required, but comes in handy when configuring 
 ## Installing
 just put it somewhere in your path.
 
-Thanks to Noon for enthusiastic support. 
