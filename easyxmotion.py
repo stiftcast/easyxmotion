@@ -3,8 +3,8 @@
 
 #############################################################################
 ##
-## Copyright 2012
-## Author: Loki Davison <loki.davison@gravityfour.com>
+## Copyright 2012, 2020
+## Authors: Loki Davison <loki.davison@gravityfour.com>, stiftcast <stiftcast@gmail.com>
 ## gravityfour.com and musicfilmcomedy.com
 ##
 ## This program is free software; you can redistribute it and/or
