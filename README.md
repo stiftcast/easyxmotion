@@ -18,5 +18,10 @@ This is the first open source project by [Gravity Four](http://www.gravityfour.c
 The `xorg-xlsfonts` package isn't required, but comes in handy when configuring the desired font.
 
 ## Installing
-just put it somewhere in your path.
-
+Clone the repo and install:
+```
+git clone https://github.com/stiftcast/easyxmotion
+cd easyxmotion
+pip3 install .
+```
+Afterwards, you can use the program by issuing the command `easyxmotion`.
