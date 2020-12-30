@@ -8,8 +8,6 @@ Should work with any window manager that supports [EWMH](http://en.wikipedia.org
 
 inspired by the [easymotion vim plugin](https://github.com/Lokaltog/vim-easymotion).
 
-This is the first open source project by [Gravity Four](http://www.gravityfour.com).
-
 ## Dependencies
 
 ### Arch
