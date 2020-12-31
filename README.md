@@ -18,18 +18,17 @@ The `xorg-xlsfonts` package isn't required, but comes in handy when configuring 
 ## Installing
 Install with the `pipx` (recommended) or `pip` commands:
 ```sh
-pipx install easyxmotion
+pipx install "https://github.com/stiftcast/easyxmotion/releases/download/v1.0/easyxmotion-1.0-py3-none-any.whl"
 ```
 or
 ```sh
-pip3 install --user easyxmotion
+pip3 install --user "https://github.com/stiftcast/easyxmotion/releases/download/v1.0/easyxmotion-1.0-py3-none-any.whl"
 ```
 
-Alternatively, you can clone the repo and install:
+Alternatively, you can download the wheel [here](https://github.com/stiftcast/easyxmotion/releases/latest) and install it locally:
 ```
-git clone https://github.com/stiftcast/easyxmotion
-cd easyxmotion
-pip3 install --user .
+cd ~/Downloads  # Or wherever you saved it
+pip3 install --user easyxmotion-1.0-py3-none-any.whl
 ```
 Afterwards, you can use the program by issuing the command `easyxmotion`.
 
