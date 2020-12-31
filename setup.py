@@ -22,7 +22,6 @@ setup(
     install_requires=[
     # Un-official py3 port of pyosd, the original project and documentation are seemingly unavailable.
 	"pyosd @ git+https://github.com/dzen/pyosd@master#egg=pyosd",
-    	"python-xlib"
     ],
     classifiers=[
         "Intended Audience :: Developers",
