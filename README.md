@@ -11,9 +11,9 @@ inspired by the [easymotion vim plugin](https://github.com/Lokaltog/vim-easymoti
 ## Dependencies
 
 ### Arch
-```sudo pacman -S libwnck3 xosd gobject-introspection python-gobject python-xlib python-cario xorg-xlsfonts```
+```sudo pacman -S libwnck3 xosd gobject-introspection python-gobject python-xlib python-cario```
 
-The `xorg-xlsfonts` package isn't required, but comes in handy when configuring the desired font.
+The `xorg-xlsfonts` package can also be installed, it comes in handy when configuring the desired font.
 
 ## Installing
 Install with the `pipx` (recommended) or `pip` commands:
