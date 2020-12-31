@@ -26,7 +26,7 @@ pip3 install --user "https://github.com/stiftcast/easyxmotion/releases/download/
 ```
 
 Alternatively, you can download the wheel [here](https://github.com/stiftcast/easyxmotion/releases/latest) and install it locally:
-```
+```sh
 cd ~/Downloads  # Or wherever you saved it
 pip3 install --user easyxmotion-1.0-py3-none-any.whl
 ```
