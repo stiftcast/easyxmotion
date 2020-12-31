@@ -16,10 +16,31 @@ inspired by the [easymotion vim plugin](https://github.com/Lokaltog/vim-easymoti
 The `xorg-xlsfonts` package isn't required, but comes in handy when configuring the desired font.
 
 ## Installing
-Clone the repo and install:
+Install with the `pipx` (recommended) or `pip` commands:
+```sh
+pipx install easyxmotion
+```
+or
+```sh
+pip3 install --user easyxmotion
+```
+
+Alternatively, you can clone the repo and install:
 ```
 git clone https://github.com/stiftcast/easyxmotion
 cd easyxmotion
-pip3 install .
+pip3 install --user .
 ```
 Afterwards, you can use the program by issuing the command `easyxmotion`.
+
+
+## Example
+The best way to use this program is by wrapping it in a shell script, and calling it using a keybinding in your window manager.
+
+In addition, using the `xte` (provided by the `xautomation` package) command to trigger a keyup action on the keys that correspond to the keybinding used to launch the script can help prevent the program from prematurely exiting, in case you don't take your hand off the keys right away.
+```sh
+xte "keyup Super_L"
+xte "keyup w"
+easyxmotion  # Append your options here, if desired.
+```
+Note that the above will likely be need to be called using sudo. This is due to easyxmotion needing access to the `/run` directory.
